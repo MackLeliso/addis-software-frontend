@@ -42,7 +42,6 @@ export const AddEmployeeForm = () => {
   const onSaveEmployeeClicked = async () => {
     if (canSave) {
       try {
-        console.log({ name, birthday, salary: Number(salary), gender });
         setAddRequestStatus("pending");
         dispatch(
           addNewEmployee({ name, birthday, salary: Number(salary), gender })

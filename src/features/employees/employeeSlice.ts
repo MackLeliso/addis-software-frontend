@@ -24,6 +24,7 @@ export const addNewEmployee = createAsyncThunk(
   async (initialEmployee: Omit<EmployeeType, "_id">) => {
     try {
       const response = await http.post("employee", initialEmployee);
+      console.log(response);
       return response.data;
     } catch (error: any) {
       return error.message;

@@ -61,7 +61,7 @@ export const EmployeeList = () => {
   const employees = useSelector(selectAllEmployees);
   const error = useSelector(getEmployeesError);
   const status = useSelector(getEmployeesStatus);
-
+  console.log(employees);
   useEffect(() => {
     if (status === "idle") {
       dispatch(fetchEmployees());
